@@ -314,12 +314,16 @@ body::after {
 }
 
 
-    
-   .twitch { grid-column: span 6; padding: 0; overflow: hidden; }
+ .twitch {
+  grid-column: span 6;
+  padding: 0;
+  overflow: hidden;
+}
 
+.bio {
+  grid-column: span 6;
+}
 
-    .bio { grid-column: span 6; }        /* Chi sono */
-   
     }
 
     .schedule li {
@@ -364,10 +368,6 @@ body::after {
 }
 
 
-
-    /* Twitch embed */
-    .twitch { grid-column: span 12; padding: 0; overflow: hidden; }
-
     .twitch iframe {
   width: 100%;
   height: 340px;
@@ -385,10 +385,17 @@ body::after {
       padding: 10px;
     }
 
-    @media (max-width: 800px) {
-      .bio, { grid-column: span 12; }
-      .twitch, { height: 360px; }
-    }
+  @media (max-width: 800px) {
+  .twitch,
+  .bio {
+    grid-column: span 12;
+  }
+
+  .twitch iframe {
+    height: 360px;
+  }
+}
+
    
     /* Mascotte sul lato destro dello sfondo */
 body::before {
