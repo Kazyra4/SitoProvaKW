@@ -516,6 +516,19 @@ body::before {
     height: 360px; /* aumenta altezza del video su mobile */
   }
 }
+    @media (max-width: 800px) {
+  /* La card video prende tutta la larghezza disponibile su mobile */
+  .left-column .card.twitch {
+    grid-column: span 1;   /* una colonna interna della griglia 1fr */
+    width: 100%;           /* assicura che riempia tutto lo spazio */
+  }
+
+  .left-column .card.twitch iframe {
+    width: 100%;           /* iframe prende tutta la card */
+    height: 360px;         /* altezza adeguata su mobile */
+  }
+}
+
 
 
 
