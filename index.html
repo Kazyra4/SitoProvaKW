@@ -518,6 +518,23 @@ body::before {
   }
 }
 
+    @media (max-width: 800px) {
+  /* La card Idol prende tutta la larghezza della colonna */
+  .left-column .card.idol {
+    grid-column: span 1;   /* occupa una colonna interna (che è full width) */
+    width: 100%;
+    min-height: auto;       /* lascia che l’altezza si adatti al contenuto */
+    display: block;         /* non usare flex verticale per centrare */
+    padding: 18px;          /* mantiene padding originale */
+  }
+
+  .left-column .card.idol h2,
+  .left-column .card.idol p {
+    margin: 0 0 10px 0;     /* margini uniformi */
+  }
+}
+
+  
 
 
 
