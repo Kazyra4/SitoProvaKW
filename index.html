@@ -495,85 +495,6 @@ body::before {
 }
 
     @media (max-width: 800px) {
-  .left-column .card.idol {
-    grid-column: span 12;
-  }
-}
-
-    @media (max-width: 800px) {
-  .left-column {
-    grid-column: span 12;  /* la colonna sinistra occupa tutta la larghezza */
-    display: grid;
-    grid-template-columns: 1fr;  /* una sola colonna interna */
-    gap: 18px;                  /* mantiene il gap tra card */
-  }
-
-  .left-column .card {
-    grid-column: span 1;  /* ogni card prende tutta la larghezza disponibile */
-  }
-
-  .twitch iframe {
-    height: 360px; /* aumenta altezza del video su mobile */
-  }
-}
-    @media (max-width: 800px) {
-  /* La card video prende tutta la larghezza disponibile su mobile */
-  .left-column .card.twitch {
-    grid-column: span 1;   /* una colonna interna della griglia 1fr */
-    width: 100%;           /* assicura che riempia tutto lo spazio */
-  }
-
-  .left-column .card.twitch iframe {
-    width: 100%;           /* iframe prende tutta la card */
-    height: 360px;         /* altezza adeguata su mobile */
-  }
-}
-
-    @media (max-width: 800px) {
-  /* Assicura che la colonna sinistra occupi tutta la larghezza */
-  .left-column {
-    grid-column: span 12;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  /* Ogni card prende tutta la larghezza */
-  .left-column .card {
-    width: 100%;
-    grid-column: span 1;
-  }
-
-  /* Card Idol già a posto */
-  .left-column .card.idol {
-    grid-column: span 12;
-  }
-
-  /* Card video */
-  .left-column .card.twitch {
-    grid-column: span 1;
-    width: 100%;
-  }
-
-  /* Wrapper interno: rimuove padding e bordi che restringono l'iframe */
-  .left-column .card.twitch > div {
-    padding-bottom: 56.25%; /* mantiene proporzioni 16:9 */
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius);
-    box-shadow: 0 0 20px var(--accent-soft);
-  }
-
-  /* iframe: riempie tutto lo spazio */
-  .left-column .card.twitch iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-    @media (max-width: 800px) {
   .left-column .card.twitch {
     width: 100%;  /* card prende tutta la larghezza della colonna */
   }
@@ -600,7 +521,6 @@ body::before {
 
 
 
-
   </style>
 </head>
 <body>
@@ -622,21 +542,17 @@ body::before {
   <!-- COLONNA SINISTRA -->
   <div class="left-column">
 
-   <!-- Card Video YouTube -->
-<div class="card twitch">
-  <h2 style="color: var(--accent); text-shadow: 0 0 8px rgba(57,255,184,0.6), 0 0 16px rgba(127,255,225,0.4); margin-bottom: 12px;">
-    🎬 Chi è Kayuri? Ecco Spiegato!
-  </h2>
-  <div class="video-wrapper">
-    <iframe 
-        src="https://www.youtube.com/embed/BP6ARId8Vdg" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-    </iframe>
-  </div>
+    <!-- Video -->
+  <div class="card twitch">
+  <iframe 
+      width="100%" 
+      height="320" 
+      src="https://www.youtube.com/embed/BP6ARId8Vdg" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
 </div>
 
 
