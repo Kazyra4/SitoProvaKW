@@ -328,10 +328,18 @@ body::after {
 
   .left-column {
   grid-column: span 6;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr;
   gap: 18px;
 }
+   
+    .left-column .card,
+.card.bio {
+  height: 100%;
+}
+
+
+
 
 .bio {
   grid-column: span 6;
@@ -471,6 +479,12 @@ body::before {
 
 .card.idol h2 {
   font-size: 1.35rem;
+}
+
+    .card.idol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
