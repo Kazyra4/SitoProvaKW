@@ -500,6 +500,23 @@ body::before {
   }
 }
 
+    @media (max-width: 800px) {
+  .left-column {
+    grid-column: span 12;  /* la colonna sinistra occupa tutta la larghezza */
+    display: grid;
+    grid-template-columns: 1fr;  /* una sola colonna interna */
+    gap: 18px;                  /* mantiene il gap tra card */
+  }
+
+  .left-column .card {
+    grid-column: span 1;  /* ogni card prende tutta la larghezza disponibile */
+  }
+
+  .twitch iframe {
+    height: 360px; /* aumenta altezza del video su mobile */
+  }
+}
+
 
 
   </style>
